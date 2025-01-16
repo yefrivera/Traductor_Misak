@@ -1,0 +1,454 @@
+[
+    {
+        "español": "familia",
+        "misak": "yaulθ"
+    },
+    {
+        "español": "identidad",
+        "misak": "namuynamuy"
+    },
+    {
+        "español": "territorio",
+        "misak": "nupirθ"
+    },
+    {
+        "español": "ojos",
+        "misak": "kap"
+    },
+    {
+        "español": "blanco",
+        "misak": "pulθ"
+    },
+    {
+        "español": "negro",
+        "misak": "yalθ"
+    },
+    {
+        "español": "rojo",
+        "misak": "pikθ"
+    },
+    {
+        "español": "azul",
+        "misak": "pilli"
+    },
+    {
+        "español": "amarillo",
+        "misak": "θskθ"
+    },
+    {
+        "español": "verde",
+        "misak": "chilka"
+    },
+    {
+        "español": "nosotros",
+        "misak": "nam"
+    },
+    {
+        "español": "ustedes",
+        "misak": "ñim"
+    },
+    {
+        "español": "de nosotros, nuestro",
+        "misak": "namui"
+    },
+    {
+        "español": "de ustedes",
+        "misak": "ñimui"
+    },
+    {
+        "español": "ruana",
+        "misak": "turi"
+    },
+    {
+        "español": "paño",
+        "misak": "pall"
+    },
+    {
+        "español": "sombrero",
+        "misak": "kuari"
+    },
+    {
+        "español": "sol",
+        "misak": "pθsr"
+    },
+    {
+        "español": "bufanda",
+        "misak": "ilik"
+    },
+    {
+        "español": "mochila",
+        "misak": "wasr"
+    },
+    {
+        "español": "color",
+        "misak": "kulur"
+    },
+    {
+        "español": "pintado",
+        "misak": "pisik"
+    },
+    {
+        "español": "ir",
+        "misak": "ip"
+    },
+    {
+        "español": "venir",
+        "misak": "atrup"
+    },
+    {
+        "español": "atras",
+        "misak": "wentau"
+    },
+    {
+        "español": "adelante",
+        "misak": "metrap"
+    },
+    {
+        "español": "afuera",
+        "misak": "wampik"
+    },
+    {
+        "español": "izquierda",
+        "misak": "atsi"
+    },
+    {
+        "español": "derecha",
+        "misak": "kusr"
+    },
+    {
+        "español": "arriba",
+        "misak": "pala"
+    },
+    {
+        "español": "cerca",
+        "misak": "lutau"
+    },
+    {
+        "español": "lejos",
+        "misak": "yap"
+    },
+    {
+        "español": "aqui",
+        "misak": "yu"
+    },
+    {
+        "español": "ahi",
+        "misak": "uyu"
+    },
+    {
+        "español": "corazon",
+        "misak": "isramsruk"
+    },
+    {
+        "español": "arriba",
+        "misak": "pala"
+    },
+    {
+        "español": "lengua",
+        "misak": "nilθ"
+    },
+    {
+        "español": "diente",
+        "misak": "trukul"
+    },
+    {
+        "español": "hueso",
+        "misak": "tsutsik"
+    },
+    {
+        "español": "jugar",
+        "misak": "eshekθp"
+    },
+    {
+        "español": "ponerse",
+        "misak": "kep"
+    },
+    {
+        "español": "entrar",
+        "misak": "kepip"
+    },
+    {
+        "español": "regar",
+        "misak": "luship"
+    },
+    {
+        "español": "limpio",
+        "misak": "chish"
+    },
+    {
+        "español": "contento",
+        "misak": "kasrak"
+    },
+    {
+        "español": "frio",
+        "misak": "kθtrak"
+    },
+    {
+        "español": "rapido",
+        "misak": "malla"
+    },
+    {
+        "español": "chumbe",
+        "misak": "pθrtsi"
+    },
+    {
+        "español": "crespo",
+        "misak": "pichill"
+    },
+    {
+        "español": "chorro",
+        "misak": "piur"
+    },
+    {
+        "español": "ceniza",
+        "misak": "usrθ"
+    },
+    {
+        "español": "yo",
+        "misak": "na"
+    },
+    {
+        "español": "eres",
+        "misak": "ku ku?"
+    },
+    {
+        "español": "es",
+        "misak": "kθn"
+    },
+    {
+        "español": "esto,este",
+        "misak": "i"
+    },
+    {
+        "español": "pulmon",
+        "misak": "shau mantrθ"
+    },
+    {
+        "español": "labios",
+        "misak": "trikkalus"
+    },
+    {
+        "español": "sangre",
+        "misak": "ani"
+    },
+    {
+        "español": "espalda",
+        "misak": "llik"
+    },
+    {
+        "español": "meter",
+        "misak": "keerθp"
+    },
+    {
+        "español": "mandar",
+        "misak": "karup"
+    },
+    {
+        "español": "hervir",
+        "misak": "kuaalap"
+    },
+    {
+        "español": "besar",
+        "misak": "muchap"
+    },
+    {
+        "español": "todo, entero",
+        "misak": "θrθpa"
+    },
+    {
+        "español": "hambre",
+        "misak": "parθ"
+    },
+    {
+        "español": "cola",
+        "misak": "mθsr"
+    },
+    {
+        "español": "corto",
+        "misak": "lantθik"
+    },
+    {
+        "español": "mugroso, sucio",
+        "misak": "chillik"
+    },
+    {
+        "español": "sembrar",
+        "misak": "ellkuap"
+    },
+    {
+        "español": "hacer minga",
+        "misak": "alap"
+    },
+    {
+        "español": "levantarse",
+        "misak": "kutrap"
+    },
+    {
+        "español": "dar de comer",
+        "misak": "mannθp"
+    },
+    {
+        "español": "en el suelo",
+        "misak": "pirau"
+    },
+    {
+        "español": "allá",
+        "misak": "θsrθ"
+    },
+    {
+        "español": "al frente",
+        "misak": "pintrθke"
+    },
+    {
+        "español": "(muy) cerca",
+        "misak": "pulu"
+    },
+    {
+        "español": "adentro o debajo",
+        "misak": "umpu"
+    },
+    {
+        "español": "adolorido",
+        "misak": "pusrkuaik"
+    },
+    {
+        "español": "doler",
+        "misak": "pusrkuap"
+    },
+    {
+        "español": "correr",
+        "misak": "lulθp"
+    },
+    {
+        "español": "del pequeño",
+        "misak": "unai"
+    },
+    {
+        "español": "pequeño",
+        "misak": "unθ"
+    },
+    {
+        "español": "hombres, varones",
+        "misak": "mθkelθ"
+    },
+    {
+        "español": "hombre, varón",
+        "misak": "mθk"
+    },
+    {
+        "español": "amarillos",
+        "misak": "θskθilθ"
+    },
+    {
+        "español": "rojos",
+        "misak": "pikelθ"
+    },
+    {
+        "español": "pié",
+        "misak": "katsik"
+    },
+    {
+        "español": "anaco",
+        "misak": "lusik"
+    },
+    {
+        "español": "contemos, digamos",
+        "misak": "eshka kun"
+    },
+    {
+        "español": "a los nombres",
+        "misak": "munchimeran"
+    },
+    {
+        "español": "de ellos, de ellas",
+        "misak": "nθmui"
+    },
+    {
+        "español": "en cuanto a ellos",
+        "misak": "nθmpe"
+    },
+    {
+        "español": "éso, ése",
+        "misak": "θ"
+    },
+    {
+        "español": "en cuanto a mí",
+        "misak": "nape"
+    },
+    {
+        "español": "usted, tú",
+        "misak": "ñi"
+    },
+    {
+        "español": "de mi, mío",
+        "misak": "nai"
+    },
+    {
+        "español": "el, ella",
+        "misak": "nθ"
+    },
+    {
+        "español": "nombre",
+        "misak": "munchi"
+    },
+    {
+        "español": "que?",
+        "misak": "chi"
+    },
+    {
+        "español": "soy",
+        "misak": "kur"
+    },
+    {
+        "español": "¿quien?",
+        "misak": "mu"
+    },
+    {
+        "español": "no soy",
+        "misak": "kθmur"
+    },
+    {
+        "español": "pene",
+        "misak": "pishku"
+    },
+    {
+        "español": "barba",
+        "misak": "milisik"
+    },
+    {
+        "español": "vagina",
+        "misak": "chuka"
+    },
+    {
+        "español": "encia",
+        "misak": "kiñu"
+    },
+    {
+        "español": "axila",
+        "misak": "maraktrapu"
+    },
+    {
+        "español": "ano",
+        "misak": "pθikθrθ"
+    },
+    {
+        "español": "intestino delgado",
+        "misak": "shill pθitsi"
+    },
+    {
+        "español": "intestino grueso",
+        "misak": "weruk pθitsi"
+    },
+    {
+        "español": "pancreas",
+        "misak": "pulθ mantrθ"
+    },
+    {
+        "español": "higado",
+        "misak": "yalθ mantrθ"
+    },
+    {
+        "español": "chuzar",
+        "misak": "Kuanθp"
+    }
+]

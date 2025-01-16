@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traductor Español-Misak</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><c href="#">TEM</c></li>
+        <li><b href="#">Traducir texto</b></li>
+        <li><a href="#">Traducir audio</a></li>
+        <li><a href="#">Contribuir</a></li>
+        <li><a href="#">Iniciar sesión</a></li>
+        <li><a href="#">Registrarse</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Traductor Español-Misak</h1>
+    <h2>Seleccione el idioma de entrada:</h2>
+    <form id="translateForm">
+      <select id="language" name="language" required>
+        <option value="spanish">Español</option>
+        <option value="misak">Misak</option>
+      </select>
+      <input type="text" id="word" name="word" placeholder="Inserte la palabra a traducir" required>
+      <button type="submit">Traducir</button>
+    </form>
+    <div id="result">Traducción</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
