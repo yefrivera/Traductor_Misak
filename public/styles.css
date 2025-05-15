@@ -115,3 +115,49 @@ button:hover {
   margin-top: 20px;
   font-size: 1.5em;
 }
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 575px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .container {
+    width: 90%; /* Que ocupe casi toda la pantalla */
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  input, select, button {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (min-width: 576px) and (max-width: 991px) {
+  .container {
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.2em;
+  }
+  
+  input, select, button {
+    width: 90%;
+    max-width: 350px;
+  }
+}
