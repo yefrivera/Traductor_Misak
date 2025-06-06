@@ -1,17 +1,20 @@
+require('dotenv').config(); // al inicio del archivo
+dotenv.config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
 
 const app = express();
-const port = 3000;
-
+const PORT = process.env.PORT || 3000;
+// Middlewares
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Conexión a MongoDB
-mongoose.connect('mongodb://localhost:27017/diccionario', {
+// Conexión a MongoDB Atlas (o URI desde env)
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
@@ -20,43 +23,44 @@ mongoose.connect('mongodb://localhost:27017/diccionario', {
     console.error('Error conectándose a MongoDB:', error);
 });
 
-// Esquema y Modelo para la Palabra
+// Modelo
 const palabraSchema = new mongoose.Schema({
     español: String,
     misak: String
-}, { collection: 'words' }); // Asegúrate de que la colección se llama 'words'
+}, { collection: 'words' });
 
 const Palabra = mongoose.model('Palabra', palabraSchema);
 
-// Ruta para la traducción
-app.post('/traducir', async (req, res) => {
-    const { language, word } = req.body;
-    console.log(`Idioma: ${language}, Palabra: ${word}`);
-    
-    const regex = new RegExp(`^${word}$`, 'i');  // Expresión regular para hacer la búsqueda sin distinción de mayúsculas
-
-    let resultado;
-    if (language === 'spanish') {
-        resultado = await Palabra.findOne({ español: regex });
-    } else if (language === 'misak') {
-        resultado = await Palabra.findOne({ misak: regex });
-    }
-
-    console.log(`Resultado: ${resultado}`);
-
-    if (resultado) {
-        res.json({ traduccion: language === 'spanish' ? resultado.misak : resultado.español });
-    } else {
-        res.json({ error: 'Palabra no encontrada, ingrese una nueva o corrija la anterior.' });
-    }
-});
-
-// Ruta para servir index.html
+// Ruta principal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Iniciar el servidor
-app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}`);
+// Ruta de traducción
+app.post('/traducir', async (req, res) => {
+    try {
+        const { language, word } = req.body;
+        const regex = new RegExp(`^${word}$`, 'i');
+
+        let resultado;
+        if (language === 'spanish') {
+            resultado = await Palabra.findOne({ español: regex });
+        } else if (language === 'misak') {
+            resultado = await Palabra.findOne({ misak: regex });
+        }
+
+        if (resultado) {
+            res.json({ traduccion: language === 'spanish' ? resultado.misak : resultado.español });
+        } else {
+            res.json({ error: 'Palabra no encontrada, ingrese una nueva o corrija la anterior.' });
+        }
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Error del servidor' });
+    }
+});
+
+// Iniciar servidor
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });

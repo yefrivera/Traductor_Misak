@@ -1,0 +1,4 @@
+runtime: nodejs18
+env_variables:
+  MONGODB_URI: "mongodb+srv://misakuser:misak123@cluster0.otgo1hr.mongodb.net/diccionario?retryWrites=true&w=majority"
+  PORT: 8080
