@@ -1,19 +1,25 @@
 FROM node:16-alpine
 
-# Crea y establece el directorio de trabajo
+# Instala herramientas útiles para diagnóstico
+RUN apk add --no-cache curl
+
 WORKDIR /usr/src/app
 
-# Primero copia solo los archivos necesarios para instalar dependencias
-COPY package.json package-lock.json ./
+# Copia archivos de dependencias primero
+COPY package*.json ./
 
-# Instala las dependencias de producción
+# Instala solo dependencias de producción
 RUN npm ci --only=production
 
-# Copia el resto de los archivos
+# Copia el resto de la aplicación
 COPY . .
 
-# Expone el puerto
+# Expone el puerto correcto
 EXPOSE 8080
 
-# Comando para iniciar la aplicación
-CMD ["npm", "start"]
+# Health check para Cloud Run
+HEALTHCHECK --interval=30s --timeout=3s \
+  CMD curl -f http://localhost:8080/health || exit 1
+
+# Usa node directamente
+CMD ["node", "server.js"]
