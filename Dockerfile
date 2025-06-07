@@ -1,20 +1,19 @@
-# Usa la imagen oficial de Node.js
 FROM node:16-alpine
 
-# Crea el directorio de la aplicación
+# Crea y establece el directorio de trabajo
 WORKDIR /usr/src/app
 
-# Copia los archivos de configuración
-COPY package*.json ./
+# Primero copia solo los archivos necesarios para instalar dependencias
+COPY package.json package-lock.json ./
 
-# Instala las dependencias
-RUN npm install --production
+# Instala las dependencias de producción
+RUN npm ci --only=production
 
-# Copia el resto de los archivos de la aplicación
+# Copia el resto de los archivos
 COPY . .
 
-# Expone el puerto que usa tu aplicación
+# Expone el puerto
 EXPOSE 8080
 
 # Comando para iniciar la aplicación
-CMD [ "npm", "start" ]
+CMD ["npm", "start"]
