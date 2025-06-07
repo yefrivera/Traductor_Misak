@@ -1,5 +1,6 @@
 require('dotenv').config(); // al inicio del archivo
 //dotenv.config();
+console.log('Mongo URI:', process.env.MONGODB_URI);
 
 const express = require('express');
 const mongoose = require('mongoose');
