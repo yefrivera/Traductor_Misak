@@ -20,7 +20,7 @@ steps:
           --platform managed \
           --allow-unauthenticated \
           --port 8080 \
-          --set-secrets MONGODB_URI=projects/$PROJECT_ID/secrets/MONGODB_URI:latest \
+          --set-secrets MONGODB_URI=MONGODB_URI:latest \
           --set-env-vars NODE_ENV=production
     timeout: 1200s
     id: 'deploy'
