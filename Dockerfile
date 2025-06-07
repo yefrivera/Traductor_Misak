@@ -1,17 +1,20 @@
-FROM node:20
+# Usa la imagen oficial de Node.js
+FROM node:16-alpine
 
-# Crear directorio de trabajo
-WORKDIR /app
+# Crea el directorio de la aplicación
+WORKDIR /usr/src/app
 
-# Copiar dependencias e instalarlas
+# Copia los archivos de configuración
 COPY package*.json ./
-RUN npm install
 
-# Copiar el resto de la aplicación
+# Instala las dependencias
+RUN npm install --production
+
+# Copia el resto de los archivos de la aplicación
 COPY . .
 
-# Exponer el puerto (por defecto Cloud Run usa 8080)
+# Expone el puerto que usa tu aplicación
 EXPOSE 8080
 
-# Iniciar la app
-CMD [ "node", "server.js" ]
+# Comando para iniciar la aplicación
+CMD [ "npm", "start" ]
