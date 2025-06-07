@@ -10,16 +10,23 @@ steps:
     id: 'push'
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    args: ['gcloud', 'run', 'deploy', 'misak-dictionary',
-           '--image', 'gcr.io/$PROJECT_ID/misak-dictionary:$COMMIT_SHA',
-           '--region', 'us-central1',
-           '--platform', 'managed',
-           '--allow-unauthenticated',
-           '--port', '8080',
-           '--timeout', '600s',
-           '--cpu', '1',
-           '--memory', '512Mi',
-           '--set-env-vars', 'NODE_ENV=production']
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        echo "Fetching MongoDB URI secret..."
+        MONGODB_URI=$(gcloud secrets versions access latest --secret=MONGODB_URI)
+        echo "Deploying to Cloud Run..."
+        gcloud run deploy misak-dictionary \
+          --image gcr.io/$PROJECT_ID/misak-dictionary:$COMMIT_SHA \
+          --region us-central1 \
+          --platform managed \
+          --allow-unauthenticated \
+          --port 8080 \
+          --timeout 600s \
+          --cpu 1 \
+          --memory 512Mi \
+          --set-env-vars NODE_ENV=production,MONGODB_URI=$MONGODB_URI
     timeout: 1200s
     id: 'deploy'
 
