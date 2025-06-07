@@ -1,9 +1,0 @@
-runtime: nodejs20
-
-env_variables:
-  PORT: 8080
-
-# Se define el secreto
-# Este NO expone el valor en texto plano
-secrets:
-  MONGODB_URI: projects/endless-ability-462116-v3/secrets/MONGODB_URI/versions/latest
